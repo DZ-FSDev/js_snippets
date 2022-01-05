@@ -18,14 +18,14 @@
  */
 
 /**
- * Toggles the visibility of elements whose class matches the specified class.
- * Visibility of the first toggle is applied to subsequent class members of
+ * Toggles the display of elements whose class matches the specified class.
+ * Display of the first toggle is applied to subsequent class members of
  * the document.
  *
  * @param {String} clazz The specified class to find from the Document.
  * @author DZ-FSDev
  */
-function toggleVisibleByClass(clazz) {
+function toggleDisplayByClass(clazz) {
   var xx = document.getElementsByClassName(clazz);
   var invisible = xx[0].style.display === "none";
   for(let x of xx){
@@ -38,12 +38,12 @@ function toggleVisibleByClass(clazz) {
 }
 
 /**
- * Makes visible the elements whose class matches the specified class.
+ * Enables display of elements whose class matches the specified class.
  *
  * @param {String} clazz The specified class to find from the Document.
  * @author DZ-FSDev
  */
-function showVisibleByClass(clazz) {
+function showDisplayByClass(clazz) {
   var xx = document.getElementsByClassName(clazz);
   for(let x of xx){
     x.style.display = "block";
@@ -51,14 +51,34 @@ function showVisibleByClass(clazz) {
 }
 
 /**
- * Makes invisible the elements whose class matches the specified class.
+ * Disables display of elements whose class matches the specified class.
  *
  * @param {String} clazz The specified class to find from the Document.
  * @author DZ-FSDev
  */
-function hideVisibleByClass(clazz) {
+function hideDisplayByClass(clazz) {
   var xx = document.getElementsByClassName(clazz);
   for(let x of xx){
     x.style.display = "none";
+  }
+}
+
+/**
+ * Toggles the visibility of elements whose class matches the specified class.
+ * Visibility of the first toggle is applied to subsequent class members of
+ * the document.
+ *
+ * @param {String} clazz The specified class to find from the Document.
+ * @author DZ-FSDev
+ */
+function toggleDisplayByClass(clazz) {
+  var xx = document.getElementsByClassName(clazz);
+  var invisible = xx[0].style.display === "none";
+  for(let x of xx){
+  	if (invisible) {
+    	x.style.visible = "visible";
+  	} else {
+    	x.style.visible = "hidden";
+ 	}
   }
 }
