@@ -26,15 +26,15 @@
  * @author DZ-FSDev
  */
 function toggleDisplayByClass(clazz) {
-  var xx = document.getElementsByClassName(clazz);
-  var invisible = xx[0].style.display === "none";
-  for(let x of xx){
-  	if (invisible) {
-    	x.style.display = "block";
-  	} else {
-    	x.style.display = "none";
- 	}
-  }
+	var xx = document.getElementsByClassName(clazz);
+	var invisible = xx[0].style.display === "none";
+	for (let x of xx) {
+		if (invisible) {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
+		}
+	}
 }
 
 /**
@@ -44,10 +44,10 @@ function toggleDisplayByClass(clazz) {
  * @author DZ-FSDev
  */
 function showDisplayByClass(clazz) {
-  var xx = document.getElementsByClassName(clazz);
-  for(let x of xx){
-    x.style.display = "block";
-  }
+	var xx = document.getElementsByClassName(clazz);
+	for (let x of xx) {
+		x.style.display = "block";
+	}
 }
 
 /**
@@ -57,10 +57,10 @@ function showDisplayByClass(clazz) {
  * @author DZ-FSDev
  */
 function hideDisplayByClass(clazz) {
-  var xx = document.getElementsByClassName(clazz);
-  for(let x of xx){
-    x.style.display = "none";
-  }
+	var xx = document.getElementsByClassName(clazz);
+	for (let x of xx) {
+		x.style.display = "none";
+	}
 }
 
 /**
@@ -71,14 +71,71 @@ function hideDisplayByClass(clazz) {
  * @param {String} clazz The specified class to find from the Document.
  * @author DZ-FSDev
  */
-function toggleDisplayByClass(clazz) {
-  var xx = document.getElementsByClassName(clazz);
-  var invisible = xx[0].style.display === "none";
-  for(let x of xx){
-  	if (invisible) {
-    	x.style.visible = "visible";
-  	} else {
-    	x.style.visible = "hidden";
- 	}
-  }
+function toggleVisibilityByClass(clazz) {
+	var xx = document.getElementsByClassName(clazz);
+	var invisible = xx[0].style.visibility === "hidden";
+	for (let x of xx) {
+		if (invisible) {
+			x.style.visibility = "visible";
+		} else {
+			x.style.visibility = "hidden";
+		}
+	}
+}
+
+/**
+ * Increments all elements' text matching the specified class by a specified
+ * amount. If the element contains a non-number, it will be set to the
+ * specified increment.
+ *
+ * @param {String} clazz The specified class to find from the Document.
+ * @author DZ-FSDev
+ */
+function incrementTextByClass(clazz, amount) {
+	var xx = document.getElementsByClassName(clazz);
+	for (let x of xx) {
+		x.textContent = (parseInt(x.textContent) || 0) + amount;
+	}
+}
+
+/**
+ * 
+ * 
+ * @param {String} clazz The specified class that elements must be a part of.
+ * @param {String} klazz The specified class to switch to.
+ * @param {String} klass The specified class to switch out.
+ */
+function swapClassIfMemberOf(clazz, klazz, klass){
+	var xx = document.getElementsByClassName(clazz);
+	for(let x of xx){
+		x.classList.replace(klass, klazz);
+	}
+}
+
+/**
+ * 
+ * 
+ * @param {String} clazz The specified class that elements must be a part of.
+ * @param {String} klazz The specified class to append.
+ */
+function addClassIfMemberOf(clazz, klazz){
+	var xx = document.getElementsByClassName(clazz);
+	for(let x of xx){
+		x.classList.add(klazz);
+	}
+}
+
+/**
+ *
+ *
+ * @param {String} clazz
+ * @param {String} klazz
+ * 
+ */
+function placeClassCountIn(clazz, klazz){
+	var xx = document.getElementsByClassName(clazz);
+	var yy = document.getElementsByClassName(klazz);
+	for(let x of xx){
+		x.textContent = yy.length;
+	}
 }
