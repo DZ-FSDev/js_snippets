@@ -99,11 +99,13 @@ function incrementTextByClass(clazz, amount) {
 }
 
 /**
- * 
+ * Replaces a specified class for another class provided the element is a
+ * member of a specified class.
  * 
  * @param {String} clazz The specified class that elements must be a part of.
  * @param {String} klazz The specified class to switch to.
  * @param {String} klass The specified class to switch out.
+ * @author DZ-FSDev
  */
 function swapClassIfMemberOf(clazz, klazz, klass){
 	var xx = document.getElementsByClassName(clazz);
@@ -113,10 +115,11 @@ function swapClassIfMemberOf(clazz, klazz, klass){
 }
 
 /**
- * 
+ * Adds class membership to elements which belong to a specified class.
  * 
  * @param {String} clazz The specified class that elements must be a part of.
  * @param {String} klazz The specified class to append.
+ * @author DZ-FSDev
  */
 function addClassIfMemberOf(clazz, klazz){
 	var xx = document.getElementsByClassName(clazz);
@@ -126,11 +129,12 @@ function addClassIfMemberOf(clazz, klazz){
 }
 
 /**
+ * Places the count of elements belonging to a specified class into any element
+ * who is a member of a specified class.
  *
- *
- * @param {String} clazz
- * @param {String} klazz
- * 
+ * @param {String} clazz The specified class members to display the count.
+ * @param {String} klazz The specified class members to be counted.
+ * @author DZ-FSDev
  */
 function placeClassCountIn(clazz, klazz){
 	var xx = document.getElementsByClassName(clazz);
