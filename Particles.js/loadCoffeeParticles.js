@@ -30,11 +30,11 @@ function start() {
             },
             "opacity": {
                 "value": 0.5,
-                "random": false,
+                "random": true,
                 "anim": {
-                    "enable": false,
-                    "speed": 1,
-                    "opacity_min": 0.1,
+                    "enable": true,
+                    "speed": 0.5,
+                    "opacity_min": 0.3,
                     "sync": false
                 }
             },
