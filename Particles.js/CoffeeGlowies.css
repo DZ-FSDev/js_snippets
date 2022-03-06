@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: linear-gradient(45deg, darkblue,black);
+    height: 100vh;
+}
+
+#particles-js, #particles-js2{
+    height: 100vh;
+    filter: blur(0.3vh);
+    position: absolute;
+}
+
+#particles-js2{
+    filter: blur(0.1vh);
+}
