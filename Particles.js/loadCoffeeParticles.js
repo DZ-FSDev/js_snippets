@@ -1,14 +1,23 @@
-document.addEventListener("DOMContentLoaded", start);
-document.addEventListener("mousemove", translate);
+document.addEventListener("DOMContentLoaded", configParticles);
+document.addEventListener("mousemove", translateParticles);
 
-function start() {
+/**
+ * Configures the particles.
+ * 
+ * Configures the particles. Three layers will be present optimized
+ * stereoscopically.
+ * 
+ * @version 0.0.2
+ * @author DZ-FSDev
+ */
+function configParticles() {
     var json = {
         "particles": {
             "number": {
-                "value": 3,
+                "value": 0.25,
                 "density": {
                     "enable": true,
-                    "value_area": 500
+                    "value_area": 100
                 }
             },
             "color": {
@@ -116,10 +125,10 @@ function start() {
     var json2 = {
         "particles": {
             "number": {
-                "value": 3,
+                "value": 1.25,
                 "density": {
                     "enable": true,
-                    "value_area": 500
+                    "value_area": 100
                 }
             },
             "color": {
@@ -186,8 +195,8 @@ function start() {
             "detect_on": "canvas",
             "events": {
                 "onhover": {
-                    "enable": false,
-                    "mode": "repulse"
+                    "enable": true,
+                    "mode": "bubble"
                 },
                 "onclick": {
                     "enable": false,
@@ -205,9 +214,9 @@ function start() {
                 "bubble": {
                     "distance": 400,
                     "size": 40,
-                    "duration": 2,
+                    "duration": 5,
                     "opacity": 8,
-                    "speed": 3
+                    "speed": 2
                 },
                 "repulse": {
                     "distance": 200,
@@ -241,7 +250,19 @@ function start() {
     });
 }
 
-function translate(e){
+/**
+ * Translates the particle layers stereoscopically.
+ * 
+ * Translates the particle layers stereoscopically. To achieve this, the layers
+ * proximal to the viewer is recommended to be exponentially blurred. Care
+ * should be taken to avoid too many layers as lower powered devices render
+ * blurring filters on the CPU.
+ * 
+ * @param {MouseEvent} e The mouse event for the particles to react to.
+ * @version 0.0.3
+ * @author DZ-FSDev
+ */
+function translateParticles(e){
     let $back = document.getElementById('particles-js');
     $back.style.left = -e.clientX / 30 + 'px';
     $back.style.top = -e.clientY / 30 + 'px';
