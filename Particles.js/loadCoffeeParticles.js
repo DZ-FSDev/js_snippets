@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", start);
+document.addEventListener("mousemove", translate);
 
 function start() {
     var json = {
@@ -29,7 +30,7 @@ function start() {
                 }
             },
             "opacity": {
-                "value": 0.5,
+                "value": 0.39,
                 "random": true,
                 "anim": {
                     "enable": true,
@@ -122,7 +123,7 @@ function start() {
                 }
             },
             "color": {
-                "value": "#EE8800"
+                "value": "#EE8855"
             },
             "shape": {
                 "type": "circle",
@@ -229,9 +230,27 @@ function start() {
         console.log('callback - particles.js config loaded #1');
     });
 
-    jsonUri = "data:text/plain;base64," + window.btoa(JSON.stringify(json2));
-
     particlesJS.load('particles-js2', jsonUri, () => {
         console.log('callback - particles.js config loaded #2');
     });
+
+    jsonUri = "data:text/plain;base64," + window.btoa(JSON.stringify(json2));
+
+    particlesJS.load('particles-js3', jsonUri, () => {
+        console.log('callback - particles.js config loaded #3');
+    });
+}
+
+function translate(e){
+    let $back = document.getElementById('particles-js');
+    $back.style.left = -e.clientX / 30 + 'px';
+    $back.style.top = -e.clientY / 30 + 'px';
+
+    let $mid = document.getElementById('particles-js2');
+    $mid.style.left = -e.clientX / 15 + 'px';
+    $mid.style.top = -e.clientY / 15 + 'px';
+
+    let $front = document.getElementById('particles-js3');
+    $front.style.left = -e.clientX / 10 + 'px';
+    $front.style.top = -e.clientY / 10 + 'px';
 }
