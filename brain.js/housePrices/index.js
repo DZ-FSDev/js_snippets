@@ -51,7 +51,7 @@ const testData = DATA.slice(SPLIT + 1);
 //create a simple feed forward neural network with backpropagation
 const net = new brain.NeuralNetwork({
     activation: 'sigmoid', // activation function
-    hiddenLayers: [2],
+    hiddenLayers: [3],
     iterations: 20000,
     learningRate: 0.5 // global learning rate, useful when training using streams
 });
