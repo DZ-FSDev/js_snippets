@@ -1,5 +1,10 @@
-document.addEventListener("DOMContentLoaded", rsQ);
-function rsQ(){
+document.addEventListener("DOMContentLoaded", DZrsQ);
+/**
+ * 
+ * @author DZ-FSDev
+ * @version 0.0.1
+ */
+function DZrsQ(){
     let $elems = document.getElementsByClassName('RainbowSquare');
     
     for(let $elem of $elems){
@@ -16,4 +21,3 @@ function rsQ(){
             $elem.appendChild($e);
         }
     }
-}
