@@ -1,0 +1,36 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+          "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject x="0" y="0" width="500" height="250">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+        <h2 class="RainbowSquare" style="padding-right: 30px; line-height: 30px;"><span style="animation-delay: 0.1s;">Take </span><span style="animation-delay: 0.2s;">Me </span><span style="animation-delay: 0.3s;">To </span><span style="animation-delay: 0.4s;">Your </span><span style="animation-delay: 0.5s;">Leader! </span></h2>
+		<p class="RainbowSquare" style="padding-right: 30px; line-height: 30px;"><span style="animation-delay: 0.1s;">
+			Lorem </span><span style="animation-delay: 0.2s;">ipsum </span><span style="animation-delay: 0.3s;">dolor </span><span style="animation-delay: 0.4s;">sit </span><span style="animation-delay: 0.5s;">amet </span><span style="animation-delay: 0.6s;">consectetur </span><span style="animation-delay: 0.7s;">adipisicing </span><span style="animation-delay: 0.8s;">elit.
+			Labore </span><span style="animation-delay: 0.9s;">porro </span><span style="animation-delay: 1s;">expedita </span><span style="animation-delay: 1.1s;">repudiandae </span><span style="animation-delay: 1.2s;">ullam! </span><span style="animation-delay: 1.3s;">Sit </span><span style="animation-delay: 1.4s;">nihil
+			facere </span><span style="animation-delay: 1.5s;">laborum, </span><span style="animation-delay: 1.6s;">reprehenderit </span><span style="animation-delay: 1.7s;">expedita, </span><span style="animation-delay: 1.8s;">perspiciatis
+			aliquam </span><span style="animation-delay: 1.9s;">dignissimos </span><span style="animation-delay: 2s;">quaerat </span><span style="animation-delay: 2.1s;">at </span><span style="animation-delay: 2.2s;">nisi </span><span style="animation-delay: 2.3s;">doloremque </span><span style="animation-delay: 2.4s;">saepe
+			optio </span><span style="animation-delay: 2.5s;">modi </span><span style="animation-delay: 2.6s;">magnam.
+		 </span></p>
+         </div>
+    </foreignObject>
+    <style>
+        foreignObject{
+            background-color: black;
+        }
+        .RainbowSquare span{
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-name: RainbowSquare;
+            position: relative;
+        }
+        
+        @keyframes RainbowSquare {
+            0%   {color:red; left:0px; top:0px;}
+            20%  {color:yellow; left:20px; top:0px;}
+            40%  {color:greenyellow; left:20px; top:20px;}
+            60%  {color:cyan; left:0px; top:20px;}
+            80% {color:plum; left:0px; top:10px;}
+            99% {color:red; left:0px; top:0px;}
+        }
+    </style>
+</svg>
